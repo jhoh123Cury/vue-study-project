@@ -35,10 +35,17 @@
 
         methods : {
             callData(){
-                
+                axios.get(`https://dapi.kakao.com/v2/search/web?query=${this.search}`,{
+                    headers: {
+                        Authorization: `KakaoAK ${process.env.VUE_APP_KAKAO_KEY}`
+                    }
+                }).then(response=>{
+                    console.log(response);
+                    this.list = response.data.documents;
+                }).catch(error=>{
+                    console.error(error);
+                });
             },
-
-
         }
     }
 </script>
