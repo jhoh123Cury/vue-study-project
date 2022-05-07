@@ -11,7 +11,7 @@
     export default {
         methods : {
             login(){
-
+                console.log("로그인!!");
             }
         }
     }
