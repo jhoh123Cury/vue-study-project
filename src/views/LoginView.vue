@@ -11,7 +11,7 @@
     export default {
         methods : {
             login(){
-
+                alert('코드가 달라졌다!!')
             }
         }
     }
